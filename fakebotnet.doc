@@ -1,0 +1,78 @@
+  Contents:
+    1. Installation
+    2. Commands
+    3. Changes
+
+  1. Installation:
+
+    a. Download and un-tar the eggdrop source code.
+
+    b. Place the module folder in your src/mod directory.
+
+    c. Run ./configure (from eggdrop1.8.x/).
+
+    d. Type 'make config' or 'make iconfig'.
+
+    e. Type 'make'.
+
+    f. Copy the compiled module file (usually fakebotnet.so) into your bot's
+       modules folder.
+
+    g. Add 'loadmodule fakebotnet' to your eggdrop.conf file (do not add the .so
+       suffix).
+
+    h. Rehash or restart your bot.
+
+    i. To see your currently running modules, type '.modules'.
+
+  2. Commands:
+
+    a. .flink <bot/fake bot> (+n)
+
+      This command simulates a bot linking by broadcasting a message such as:
+
+        *** (Bot) Linked to <bot>
+
+	
+    b. .funlink <bot/fake bot> (+n)
+
+      This command simulates a bot unlinking by broadcasting a message such as:
+
+        *** (Bot) Unlinked from: <bot> (lost 1 bot and 0 users).
+
+    c. .fjoined <user/fake user> (+n)
+
+      This command simulates a user joining the partyline by broadcasting a
+      message such as:
+
+        *** (Bot) <user> has joined the party line.
+
+    d. .fleft <user/fake user> (+n)
+
+      This command simulates a user leaving the partyline by broadcasting a
+      message such as:
+
+        *** (Bot) <user> has left the party line (lost dcc link).
+
+    e. .fmsg <message/fake message> (+n)
+
+      This command broadcasts the fake message of your choice, such as:
+
+        *** (Bot) <msg>
+
+3. Changes
+
+  1.3-pseudo
+    * Modified to run on Eggdrop1.8
+
+  1.3
+
+    * Module info in status now only shows up in the 'all' option is specified.
+    * Moved version info to a #define.
+  
+  1.2
+
+    * Added argument checking.
+    * Code cleanups.
+    * Removed Context's.
+    * We now use egg_snprintf instead of sprintf.
