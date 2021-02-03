@@ -102,12 +102,12 @@ static void cmd_fmsg(struct userrec *u, int idx, char *par)
 
 static cmd_t fakebotnet_dcc[] =
 {
-  {"flink",     "n",    (Function) cmd_flink,       NULL},
-  {"funlink",   "n",    (Function) cmd_funlink,     NULL},
-  {"fjoined",   "n",    (Function) cmd_fjoined,     NULL},
-  {"fleft",     "n",    (Function) cmd_fleft,       NULL},
-  {"fmsg",      "n",    (Function) cmd_fmsg,        NULL},
-  {NULL,        NULL,   NULL,                       NULL}
+  {"flink",     "n",    (IntFunc) cmd_flink,       NULL},
+  {"funlink",   "n",    (IntFunc) cmd_funlink,     NULL},
+  {"fjoined",   "n",    (IntFunc) cmd_fjoined,     NULL},
+  {"fleft",     "n",    (IntFunc) cmd_fleft,       NULL},
+  {"fmsg",      "n",    (IntFunc) cmd_fmsg,        NULL},
+  {NULL,        NULL,   NULL,                      NULL}
 };
 
 static char *fakebotnet_close()
