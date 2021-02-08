@@ -1,4 +1,8 @@
 1.4
+- egg_snprintf() -> snprintf()
+- Rename fakebotnet.doc -> README
+- Fix incompatible pointer types
+- dos2unix
 - Now also works with eggdrop 1.8.4. (Michael Ortmann)
 1.3-pseudo
 - Modified to run on eggdrop 1.8.x (pseudo)
