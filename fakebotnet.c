@@ -43,7 +43,7 @@ static void cmd_flink(struct userrec *u, int idx, char *par)
     dprintf(idx, "Usage: flink <bot/fake bot>\n");
 
   bot = newsplit(&par);
-  egg_snprintf(msg, sizeof msg, "Linked to %s.", bot);
+  snprintf(msg, sizeof msg, "Linked to %s.", bot);
   chatout("*** %s\n", msg);
   botnet_send_chat(-1, botnetnick, msg);
 }
@@ -56,7 +56,7 @@ static void cmd_funlink(struct userrec *u, int idx, char *par)
     dprintf(idx, "Usage: funlink <bot/fake bot>\n");
     
   bot = newsplit(&par);
-  egg_snprintf(msg, sizeof msg, "Unlinked from: %s (lost 1 bot and 0 users).", bot);
+  snprintf(msg, sizeof msg, "Unlinked from: %s (lost 1 bot and 0 users).", bot);
   chatout("*** %s\n", msg);
   botnet_send_chat(-1, botnetnick, msg);
 }
@@ -69,7 +69,7 @@ static void cmd_fjoined(struct userrec *u, int idx, char *par)
     dprintf(idx, "Usage: fjoined <user/fake user>\n");
     
   user = newsplit(&par);
-  egg_snprintf(msg, sizeof msg, "%s has joined the party line.", user);
+  snprintf(msg, sizeof msg, "%s has joined the party line.", user);
   chatout("*** %s\n", msg);
   botnet_send_chat(-1, botnetnick, msg);
 }
@@ -82,7 +82,7 @@ static void cmd_fleft(struct userrec *u, int idx, char *par)
     dprintf(idx, "Usage: fleft <user/fake user>\n");
     
   user = newsplit(&par);
-  egg_snprintf(msg, sizeof msg, "%s has left the party line (lost dcc link).", user);
+  snprintf(msg, sizeof msg, "%s has left the party line (lost dcc link).", user);
   chatout("*** %s\n", msg);
   botnet_send_chat(-1, botnetnick, msg);
 }
