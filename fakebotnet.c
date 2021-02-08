@@ -129,9 +129,9 @@ char *fakebotnet_start(Function *global_funcs)
 {
   global = global_funcs;
   module_register(MODULE_NAME, fakebotnet_table, FAKEBOTNET_MAJORV, FAKEBOTNET_MINORV);
-  if (!module_depend(MODULE_NAME, "eggdrop", 108, 0)) {
+  if (!module_depend(MODULE_NAME, "eggdrop", 108, 4)) {
     module_undepend(MODULE_NAME);
-    return "This module requires Eggdrop 1.8.0 or later.";
+    return "This module requires Eggdrop 1.8.4 or later.";
   }
   add_builtins(H_dcc, fakebotnet_dcc);
   return NULL;
