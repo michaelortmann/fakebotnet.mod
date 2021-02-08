@@ -1,7 +1,6 @@
   Contents:
     1. Installation
     2. Commands
-    3. Changes
 
   1. Installation:
 
@@ -59,20 +58,3 @@
       This command broadcasts the fake message of your choice, such as:
 
         *** (Bot) <msg>
-
-3. Changes
-
-  1.3-pseudo
-    * Modified to run on Eggdrop1.8
-
-  1.3
-
-    * Module info in status now only shows up in the 'all' option is specified.
-    * Moved version info to a #define.
-  
-  1.2
-
-    * Added argument checking.
-    * Code cleanups.
-    * Removed Context's.
-    * We now use egg_snprintf instead of sprintf.

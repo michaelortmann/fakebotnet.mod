@@ -11,12 +11,11 @@
  * Copyright © 2000 - 2002 |DAWG| Scripting Group. All rights reserved.
  *
  */
- /* Updated by pseudo to work on Eggdrop 1.8 (Sep 2010) */
 
 #define MODULE_NAME "fakebotnet"
 #define MAKING_FAKEBOTNET
 #define FAKEBOTNET_MAJORV 1
-#define FAKEBOTNET_MINORV 3
+#define FAKEBOTNET_MINORV 4
 #include "src/mod/module.h"
 #include <stdlib.h>
 #undef global
