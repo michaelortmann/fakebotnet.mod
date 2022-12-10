@@ -1,8 +1,7 @@
 /*
  * FakeBotnet.mod
- * Version 1.3
+ * Version 1.4
  * By Wcc
- * http://www.dawgtcl.com:81/
  * wcc@techmonkeys.org
  *
  * This module provides dcc commands for broadcasting fake
@@ -93,7 +92,7 @@ static void cmd_fmsg(struct userrec *u, int idx, char *par)
 
   if (!par[0])
     dprintf(idx, "Usage: fmsg <message/fake message>\n");
-	
+
   strncpyz(msg, par, sizeof msg);
   chatout("*** %s\n", msg);
   botnet_send_chat(-1, botnetnick, msg);
