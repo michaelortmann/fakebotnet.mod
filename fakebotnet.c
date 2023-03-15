@@ -14,7 +14,7 @@
 #define MODULE_NAME "fakebotnet"
 #define MAKING_FAKEBOTNET
 #define FAKEBOTNET_MAJORV 1
-#define FAKEBOTNET_MINORV 4
+#define FAKEBOTNET_MINORV 5
 #include "src/mod/module.h"
 #include <stdlib.h>
 #undef global
@@ -93,7 +93,7 @@ static void cmd_fmsg(struct userrec *u, int idx, char *par)
   if (!par[0])
     dprintf(idx, "Usage: fmsg <message/fake message>\n");
 
-  strncpyz(msg, par, sizeof msg);
+  strlcpy(msg, par, sizeof msg);
   chatout("*** %s\n", msg);
   botnet_send_chat(-1, botnetnick, msg);
 }
